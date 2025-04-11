@@ -11,8 +11,7 @@ role,
 type,
 techstack,
     createdAt,
-    interviewId,
-
+    id, 
 }: InterviewCardProps) => {
     const feedback = null as Feedback | null
     const normalizedType = /mix/gi.test(type) ? "Mixed" : type
@@ -41,7 +40,7 @@ techstack,
               <div className='flex flex-row justify-between '>
                   <DisplayTechIcons techStack={techstack} />
                   <Button className='btn-primary'>
-                      <Link href={feedback ? `/interview/${interviewId}/feedback` : `interview/${interviewId}`}>{feedback ? "/check Feedback" : "View Interview" }</Link>
+                      <Link href={feedback ? `/interview/${id}/feedback` : `interview/${id}`}>{feedback ? "/check Feedback" : "View Interview" }</Link>
                   </Button>
               </div>
           </div>
